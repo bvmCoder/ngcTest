@@ -1,0 +1,33 @@
+<div>
+  <h1>List of Current Employees</h1>
+  <table border="1" width="100%">
+    <thead>
+      <th class="text-center">ID</th>
+      <th class="text-center">First Name</th>
+      <th class="text-center">Middile Initial</th>
+      <th class="text-center">Last Name</th>
+      <th class="text-center">DOB</th>
+      <th class="text-center">Age</th>
+      <th class="text-center">EDIT</th>
+      <th class="text-center">DELETE</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="employee in elc.employeeList">
+        <td class="text-center" ng-bind="employee.ID"></td>
+        <td class="text-center" ng-bind="employee.fName"></td>
+        <td class="text-center" ng-bind="employee.mName"></td>
+        <td class="text-center" ng-bind="employee.lName"></td>
+        <td class="text-center" ng-bind="employee.dob"></td>
+        <td class="text-center" ng-bind="elc.ageCalculation(employee)"></td>
+        <td class="text-center">
+          <button ng-click="elc.empEdit(employee)">Edit</button>
+        </td>
+        <td class="text-center">
+          <button ng-click="elc.empDelete(employee)">delete</button>
+        </td>
+      </tr>
+      <tbody>
+  </table>
+  <br />
+  <button ng-click="elc.addEmp()">Add New Employee</button>
+</div>

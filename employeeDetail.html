@@ -1,0 +1,34 @@
+<br />
+<br />
+<br />
+<div>
+  <form name="userForm" novalidate>
+    <!-- novalidate prevents HTML5 -->
+    <!-- NAME -->
+    <div class="form-group">
+      <label>Employee ID</label>
+      <input type="number" name="empId" ng-maxlength="5" ng-model="edc.empId" ng-required="true">
+    </div>
+    <!-- USERNAME -->
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" name="empName" ng-model="edc.empName" ng-maxlength="15">
+    </div>
+    <div class="form-group">
+      <label>Middle Initial</label>
+      <input type="text" name="empMName" ng-model="edc.empMName" ng-maxlength="1">
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" name="empLName" ng-model="edc.empLName" ng-maxlength="15">
+    </div>
+    <!-- DOB  -->
+    <div class="form-group">
+      <label>DOB</label>
+      <input type="text" name="empDob" ng-model="edc.empDob">
+    </div>
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" ng-click="edc.editEmp()">Edit</button>
+    <button type="submit" ng-click="edc.add()">Add</button>
+  </form>
+  <div>
